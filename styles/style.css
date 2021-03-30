@@ -77,10 +77,6 @@ h2 {
 header img {
     height: var(--header-height);
 }
-
-p {
-    margin: var(--gutter);
-}
   
 footer {
     position: fixed;
@@ -111,3 +107,24 @@ footer {
     }
 
   }
+
+.main-section {
+    text-align: center;
+ }
+
+.char {
+    padding: 20px;
+}
+
+li {
+    margin:10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.description {
+    font-style: italic;
+}
