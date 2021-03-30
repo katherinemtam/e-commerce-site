@@ -118,6 +118,8 @@ footer {
 
 li {
     margin:10px;
+    border: 1px black solid;
+    border-radius: 20%;
 }
 
 h3 {
