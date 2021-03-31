@@ -120,6 +120,7 @@ footer {
 ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 li {
@@ -150,7 +151,7 @@ h3 {
 .category {
     background-color: rgba(200, 196, 196, 0.5);
     width: 60px;
-    border:grey;
+    border: black;
     border-radius: 15%;
     font-size: small;
     text-align: center;
