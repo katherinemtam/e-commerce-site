@@ -56,3 +56,20 @@ export function calcItemTotal(cartArray, productArray) {
         return `$${overallItemTotal}`;
     }
 }
+
+export function createTableRow(cartItem, product) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdName.textContent = product.name;
+    tdQuantity.texxtContent = cartItem.quantity;
+
+    const total = product.price * cartItem.quantity;
+    tdPrice.textContent = `$${total}`;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+
+    return tr;
+}
