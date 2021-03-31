@@ -38,7 +38,9 @@ test('should take in an array and an id, return item of matched id', (expect) =>
 test('should take in an array and an id, return total price of all items in cart', (expect) => {
     const expected = '$44';
 
-    const actual = calcItemTotal(cart, sanX);
+    const quantity = 2;
+    const price = 22;
+    const actual = `$${calcItemTotal(quantity, price)}`;
 
     expect.deepEqual(actual, expected);
 });

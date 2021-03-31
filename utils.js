@@ -47,14 +47,8 @@ export function findById(array, id) {
     }
 }
 
-export function calcItemTotal(cartArray, productArray) {
-    let overallItemTotal = 0;
-    for (let item of cartArray) {
-        const matchingItem = findById(productArray, item.id);
-        const itemTotal = item.quantity * matchingItem.price;
-        overallItemTotal = overallItemTotal + itemTotal;
-        return `$${overallItemTotal}`;
-    }
+export function calcItemTotal(quantity, price) {
+    return quantity * price;
 }
 
 export function createTableRow(cartItem, product) {
@@ -66,10 +60,20 @@ export function createTableRow(cartItem, product) {
     tdName.textContent = product.name;
     tdQuantity.texxtContent = cartItem.quantity;
 
-    const total = product.price * cartItem.quantity;
+    const total = calcItemTotal(cartItem.quantity, product.price);
     tdPrice.textContent = `$${total}`;
 
     tr.append(tdName, tdQuantity, tdPrice);
 
     return tr;
+}
+
+export function calcOrderTotal(cartArray, productArray) {
+    let overallItemTotal = 0;
+    for (let item of cartArray) {
+        const matchingItem = findById(productArray, item.id);
+        const itemTotal = item.quantity * matchingItem.price;
+        overallItemTotal = overallItemTotal + itemTotal;
+        return `$${overallItemTotal}`;
+    }
 }
