@@ -110,16 +110,23 @@ footer {
 
 .main-section {
     text-align: center;
+    width: auto;
  }
 
 .char {
     padding: 20px;
 }
 
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 li {
-    margin:10px;
+    margin:30px;
     border: 1px black solid;
     border-radius: 20%;
+    width: 400px;
 }
 
 h3 {
@@ -129,4 +136,23 @@ h3 {
 
 .description {
     font-style: italic;
+}
+
+.main-page-img {
+    width: 100%;
+    margin: 20px;
+}
+
+.main-page-description{
+    margin: 10px;
+}
+
+.category {
+    background-color: rgba(200, 196, 196, 0.5);
+    width: 60px;
+    border:grey;
+    border-radius: 15%;
+    font-size: small;
+    text-align: center;
+    margin: auto;
 }
