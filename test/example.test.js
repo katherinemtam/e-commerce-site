@@ -1,7 +1,8 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { sanXProfileLi, findById } from '../utils.js';
+import { sanXProfileLi, findById, calcItemTotal } from '../utils.js';
 import { cart } from '../cart/cart-data.js';
+import { sanX } from '../products/products-data.js';
 
 const test = QUnit.test;
 
@@ -30,6 +31,14 @@ test('should take in an array and an id, return item of matched id', (expect) =>
     };
 
     const actual = findById(cart, 'one');
+
+    expect.deepEqual(actual, expected);
+});
+
+test('should take in an array and an id, return total price of all items in cart', (expect) => {
+    const expected = '$44';
+
+    const actual = calcItemTotal(cart, sanX);
 
     expect.deepEqual(actual, expected);
 });

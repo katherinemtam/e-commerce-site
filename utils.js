@@ -46,3 +46,13 @@ export function findById(array, id) {
             return item;
     }
 }
+
+export function calcItemTotal(cartArray, productArray) {
+    let overallItemTotal = 0;
+    for (let item of cartArray) {
+        const matchingItem = findById(productArray, item.id);
+        const itemTotal = item.quantity * matchingItem.price;
+        overallItemTotal = overallItemTotal + itemTotal;
+        return `$${overallItemTotal}`;
+    }
+}
