@@ -4,7 +4,6 @@ export function sanXProfileLi(sanXChar) {
     li.classList.add('char');
     li.style.background = sanXChar.color;
 
-
     const h3Name = document.createElement('h3');
     h3Name.classList.add('name');
     h3Name.textContent = sanXChar.name;

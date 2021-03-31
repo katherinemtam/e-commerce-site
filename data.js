@@ -15,11 +15,11 @@ export const sanX = [
         name: 'Penguin?',
         type: 'penguin?',
         color: 'rgb(227, 235, 152)',
-        img: 'http://www.san-x.jp/img/characters/sumikko/shirokuma.png',
+        img: 'http://www.san-x.jp/img/characters/sumikko/pengin.png',
         description: 'Am I even a penguin? Penguin has no confidence. In the past, there might have been a plate on Penguin’s head...',
         isAnimal: true,
         price: 2,
-        funFact: 'Cucumbers are his favorite.'
+        fact: 'Cucumbers are his favorite.'
     },
     {
         id: 'three',
@@ -30,7 +30,7 @@ export const sanX = [
         description: 'The end of a tonkatsu. Made of 1% meat, 99% fat. Left behind for being too oily...',
         isAnimal: false,
         price: 2,
-        funFact: 'The pink spot is 1% meat, the rest is 99% fat.'
+        fact: 'The pink spot is 1% meat, the rest is 99% fat.'
     },
     {
         id: 'four',
@@ -41,7 +41,7 @@ export const sanX = [
         description: 'Shy and timid, Neko usually hides in the corner. Neko worries about its body shape.',
         isAnimal: true,
         price: 2,
-        funFact: 'Insecure about body.'
+        fact: 'Insecure about body.'
     },
     {
         id: 'five',
@@ -52,6 +52,6 @@ export const sanX = [
         description: 'Is actually the last of the dinosaurs. It pretends to be a lizard to avoid being caught. Slowly warming up to Nisetsumuri.',
         isAnimal: true,
         price: 2,
-        funFact: 'Pretending to be a lizard.'
+        fact: 'Pretending to be a lizard.'
     }
 ];
