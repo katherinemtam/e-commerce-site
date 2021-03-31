@@ -7,7 +7,7 @@ export const sanX = [
         img: '../assets/shirokuma.png',
         description: 'Shirokuma is a shy bear who migrated south to avoid the cold. Shirokuma feels most calm while drinking hot tea in a corner.',
         isAnimal: true,
-        price: 2,
+        price: 22,
         fact: 'Close friends with Furoshiki.'
     },
     {
@@ -18,7 +18,7 @@ export const sanX = [
         img: '../assets/penguin.png',
         description: 'Am I even a penguin? Penguin has no confidence. In the past, there might have been a plate on Penguin’s head...',
         isAnimal: true,
-        price: 2,
+        price: 21,
         fact: 'Cucumbers are his favorite.'
     },
     {
@@ -29,7 +29,7 @@ export const sanX = [
         img: '../assets/tonkatsu.png',
         description: 'The end of a tonkatsu. Made of 1% meat, 99% fat. Left behind for being too oily...',
         isAnimal: false,
-        price: 2,
+        price: 25,
         fact: 'The pink spot is 1% meat, the rest is 99% fat.'
     },
     {
@@ -40,7 +40,7 @@ export const sanX = [
         img: '../assets/neko.png',
         description: 'Shy and timid, Neko usually hides in the corner. Neko worries about its body shape.',
         isAnimal: true,
-        price: 2,
+        price: 20,
         fact: 'Insecure about body.'
     },
     {
@@ -51,7 +51,7 @@ export const sanX = [
         img: '../assets/tokage.png',
         description: 'Is actually the last of the dinosaurs. It pretends to be a lizard to avoid being caught. Slowly warming up to Nisetsumuri.',
         isAnimal: true,
-        price: 2,
+        price: 26,
         fact: 'Pretending to be a lizard.'
     }
 ];

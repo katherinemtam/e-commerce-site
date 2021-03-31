@@ -39,3 +39,58 @@ export function sanXProfileLi(sanXChar) {
 
     return li;
 }
+
+export function findById(array, id) {
+    for (let item of array) {
+        if (item.id === id)
+            return item;
+    }
+}
+
+export function calcItemTotal(quantity, price) {
+    return quantity * price;
+}
+
+export function createTableRow(cartItem, product) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdName.textContent = product.name;
+    tdQuantity.textContent = cartItem.quantity;
+
+    const total = calcItemTotal(cartItem.quantity, product.price);
+    tdPrice.textContent = `$${total}`;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+
+    return tr;
+}
+
+export function calcOrderTotal(cartArray, productArray) {
+    let overallItemTotal = 0;
+    for (let item of cartArray) {
+        const matchingItem = findById(productArray, item.id);
+
+        const itemTotal = calcItemTotal(item.quantity, matchingItem.price);
+        overallItemTotal = overallItemTotal + itemTotal;
+    }
+    return `$${overallItemTotal}`;
+}
+
+export function createTotalRow(cartArray, productArray) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdQuantity.textContent = 'Total:';
+
+    const total = calcOrderTotal(cartArray, productArray);
+    tdPrice.textContent = `${total}`;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+
+    return tr;
+}

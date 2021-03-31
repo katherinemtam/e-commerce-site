@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/products-style.css">
-    <title>Shop</title>
+    <link rel="stylesheet" href="../styles/cart-style.css">
+    <title>Shopping Cart</title>
 </head>
 
 <body>
@@ -19,23 +18,28 @@
     </header>
     <main>
         <section class="main-section">
-            <h2>Shop Sumikko Gurashis!</h2>
+            <h2>Sumikko Gurashi Shopping Cart!</h2>
             <a href="../index.html">
                 <p>Homepage</p>
             </a>
-            <a href="../cart/index.html">
-                <p>Cart</p>
+            <a href="../products/index.html">
+                <p>Shop</p>
             </a>
-            <ul class="char-list">
-
-            </ul>
+            <table>
+                <thead>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </thead>
+            </table>
+            <button>Place order</button>
         </section>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
     </footer>
 
-    <script type="module" src="./products.js"></script>
+    <script type="module" src="./cart.js"></script>
 </body>
 
 </html>
