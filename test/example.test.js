@@ -1,10 +1,11 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { sanXProfileLi } from '../utils.js';
+import { sanXProfileLi, findById } from '../utils.js';
+import { cart } from '../cart/cart-data.js';
 
 const test = QUnit.test;
 
-test('should take in a character object and return li element', (expect) => {
+test('should take in a character object, return li element', (expect) => {
     const expected = '<li class="char" style="background: rgb(255, 255, 255);"><h3 class="name">Shirokuma</h3><p class="type">polar bear</p><img src="http://www.san-x.jp/img/characters/sumikko/shirokuma.png"><p class="description">Shirokuma is a shy bear who migrated south to avoid the cold. Shirokuma feels most calm while drinking hot tea in a corner.</p><p class="category">Animal</p><p class="price">$2</p><p class="fact">Close friends with Furoshiki.</p><button class="button">Add to Cart</button></li>';
 
     const actual = sanXProfileLi({
@@ -19,4 +20,16 @@ test('should take in a character object and return li element', (expect) => {
     });
 
     expect.equal(actual.outerHTML, expected);
+});
+
+test('should take in an array and an id, return item of matched id', (expect) => {
+    const expected =
+    {
+        'id': 'one',
+        'quantity': 2
+    };
+
+    const actual = findById(cart, 'one');
+
+    expect.deepEqual(actual, expected);
 });
