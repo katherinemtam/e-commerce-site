@@ -72,8 +72,10 @@ export function calcOrderTotal(cartArray, productArray) {
     let overallItemTotal = 0;
     for (let item of cartArray) {
         const matchingItem = findById(productArray, item.id);
-        const itemTotal = item.quantity * matchingItem.price;
+
+        const itemTotal = calcItemTotal(item.quantity, matchingItem.price);
         overallItemTotal = overallItemTotal + itemTotal;
-        return `$${overallItemTotal}`;
+
     }
+    return `$${overallItemTotal}`;
 }

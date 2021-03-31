@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { sanXProfileLi, findById, calcItemTotal, createTableRow } from '../utils.js';
+import { sanXProfileLi, findById, calcItemTotal, createTableRow, calcOrderTotal } from '../utils.js';
 import { cart } from '../cart/cart-data.js';
 import { sanX } from '../products/products-data.js';
 
@@ -35,7 +35,7 @@ test('should take in an array and an id, return item of matched id', (expect) =>
     expect.deepEqual(actual, expected);
 });
 
-test('should take in an array and an id, return total price of all items in cart', (expect) => {
+test('should take in a quantity and a price, return total price of an item', (expect) => {
     const expected = '$44';
 
     const quantity = 2;
@@ -54,4 +54,12 @@ test('should take in a cart item and the product object, return new row with nam
     const actual = createTableRow(cartItem, product);
 
     expect.equal(actual.outerHTML, expected);
+});
+
+test('should take in cart array and product array, return total price of all items in cart', (expect) => {
+    const expected = '$173';
+
+    const actual = calcOrderTotal(cart, sanX);
+
+    expect.deepEqual(actual, expected);
 });
