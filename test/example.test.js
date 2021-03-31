@@ -47,7 +47,7 @@ test('should take in a quantity and a price, return total price of an item', (ex
 
 test('should take in a cart item and the product object, return new row with name, quantity, and price', (expect) => {
 
-    const expected = '<tr><td>Shirokuma</td><td></td><td>$44</td></tr>';
+    const expected = '<tr><td>Shirokuma</td><td>2</td><td>$44</td></tr>';
 
     const cartItem = cart[0];
     const product = sanX[0];

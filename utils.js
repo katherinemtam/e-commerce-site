@@ -58,7 +58,7 @@ export function createTableRow(cartItem, product) {
     const tdPrice = document.createElement('td');
 
     tdName.textContent = product.name;
-    tdQuantity.texxtContent = cartItem.quantity;
+    tdQuantity.textContent = cartItem.quantity;
 
     const total = calcItemTotal(cartItem.quantity, product.price);
     tdPrice.textContent = `$${total}`;
@@ -75,7 +75,22 @@ export function calcOrderTotal(cartArray, productArray) {
 
         const itemTotal = calcItemTotal(item.quantity, matchingItem.price);
         overallItemTotal = overallItemTotal + itemTotal;
-
     }
     return `$${overallItemTotal}`;
+}
+
+export function createTotalRow(cartArray, productArray) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdQuantity.textContent = 'Total:';
+
+    const total = calcOrderTotal(cartArray, productArray);
+    tdPrice.textContent = `${total}`;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+
+    return tr;
 }
