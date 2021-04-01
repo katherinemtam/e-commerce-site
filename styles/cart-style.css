@@ -156,3 +156,7 @@ thead  {
 a {
     margin: 10px;
 }    
+
+.hidden {
+    display: none;
+}

@@ -4,6 +4,11 @@ import { findById, createTableRow, createTotalRow } from '../utils.js';
 
 const table = document.querySelector('table');
 const cart = getCart();
+export const orderButton = document.querySelector('.order-button');
+
+if (cart.length > 0) {
+    orderButton.classList.remove('hidden');
+}
 
 for (let cartItem of cart) {
     const matchingItem = findById(sanX, cartItem.id);
@@ -14,3 +19,9 @@ for (let cartItem of cart) {
 
 const totalRow = createTotalRow(cart, sanX);
 table.append(totalRow);
+
+orderButton.addEventListener('click', () => {
+    alert(JSON.stringify(cart));
+    localStorage.clear();
+    window.location = '../index.html';
+});
