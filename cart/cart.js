@@ -4,7 +4,7 @@ import { findById, createTableRow, createTotalRow } from '../utils.js';
 
 const table = document.querySelector('table');
 const cart = getCart();
-export const orderButton = document.querySelector('.order-button');
+const orderButton = document.querySelector('.order-button');
 
 if (cart.length > 0) {
     orderButton.classList.remove('hidden');
