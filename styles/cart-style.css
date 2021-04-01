@@ -47,7 +47,7 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -64,10 +64,6 @@ footer {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
-}
-
-.gutter-right {
-    margin-right: 20px;
 }
 
 .main-logo {
@@ -89,24 +85,13 @@ footer {
     box-shadow: var(--shadow);
 }
   
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
+.navigation {
+    display:flex;
+    margin: 20px;
+    justify-items: center;
+    align-items: center;
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
+}
 
 .main-section {
     text-align: center;
@@ -167,3 +152,7 @@ td  {
 
 thead  {
 	font-weight: bold; }
+
+a {
+    margin: 10px;
+}    
