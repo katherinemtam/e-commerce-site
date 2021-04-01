@@ -40,8 +40,8 @@ export function sanXProfileLi(sanXChar) {
     return li;
 }
 
-export function findById(array, id) {
-    for (let item of array) {
+export function findById(cartArray, id) {
+    for (let item of cartArray) {
         if (item.id === id)
             return item;
     }

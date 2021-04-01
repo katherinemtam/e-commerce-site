@@ -1,8 +1,9 @@
-import { cart } from './cart-data.js';
+import { getCart } from '../local-storage.utils.js';
 import { sanX } from '../products/products-data.js';
 import { findById, createTableRow, createTotalRow } from '../utils.js';
 
 const table = document.querySelector('table');
+const cart = getCart();
 
 for (let cartItem of cart) {
     const matchingItem = findById(sanX, cartItem.id);
