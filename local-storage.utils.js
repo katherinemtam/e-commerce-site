@@ -19,7 +19,7 @@ export function addItemToCart(productId, quantity) {
     const cartArray = getCart();
     const matchingItem = findById(cartArray, productId);
     if (matchingItem) {
-        matchingItem.quantity = Number(quantity);
+        matchingItem.quantity += Number(quantity);
     } else {
         const item = {
             id: productId,
