@@ -21,7 +21,7 @@ const totalRow = createTotalRow(cart, sanX);
 table.append(totalRow);
 
 orderButton.addEventListener('click', () => {
-    alert(JSON.stringify(cart));
+    alert(JSON.stringify(cart, true, 2));
     localStorage.clear();
     window.location = '../index.html';
 });

@@ -33,15 +33,31 @@ export function sanXProfileLi(sanXChar) {
     pFact.classList.add('fact');
     pFact.textContent = sanXChar.fact;
 
+    const select = document.createElement('select');
+    // select.textContent = '--Quantity--';
+
+    for (let i = 1; i < 11; i++) {
+        const option = document.createElement('option');
+        option.textContent = i;
+        option.value = Number(i);
+        select.append(option);
+    }
+
     const button = document.createElement('button');
     button.classList.add('button');
     button.textContent = 'Add to Cart';
 
-    button.addEventListener('click', () => {
-        addItemToCart(sanXChar.id);
+    select.addEventListener('onChange', () => {
+
     });
 
-    li.append(h3Name, pType, img, pDescription, pCategory, pPrice, pFact, button);
+    button.addEventListener('click', () => {
+        const quantity = select.value;
+        addItemToCart(sanXChar.id, quantity);
+    });
+
+
+    li.append(h3Name, pType, img, pDescription, pCategory, pPrice, pFact, select, button);
 
     return li;
 }

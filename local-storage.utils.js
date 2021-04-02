@@ -15,15 +15,15 @@ export function setCart(parsedCart) {
     localStorage.setItem(CART, stringyCart);
 }
 
-export function addItemToCart(productId) {
+export function addItemToCart(productId, quantity) {
     const cartArray = getCart();
     const matchingItem = findById(cartArray, productId);
     if (matchingItem) {
-        matchingItem.quantity++;
+        matchingItem.quantity = Number(quantity);
     } else {
         const item = {
             id: productId,
-            quantity: 1
+            quantity: Number(quantity)
         };
         cartArray.push(item);
     }
