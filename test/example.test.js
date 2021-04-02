@@ -7,7 +7,7 @@ import { sanX } from '../products/products-data.js';
 const test = QUnit.test;
 
 test('should take in a character object, return li element', (expect) => {
-    const expected = '<li class="char" style="background: rgb(255, 255, 255);"><h3 class="name">Shirokuma</h3><p class="type">polar bear</p><img src="http://www.san-x.jp/img/characters/sumikko/shirokuma.png"><p class="description">Shirokuma is a shy bear who migrated south to avoid the cold. Shirokuma feels most calm while drinking hot tea in a corner.</p><p class="category">Animal</p><p class="price">$2</p><p class="fact">Close friends with Furoshiki.</p><button class="button">Add to Cart</button></li>';
+    const expected = '<li class="char" style="background: rgb(255, 255, 255);"><h3 class="name">Shirokuma</h3><p class="type">polar bear</p><img src="http://www.san-x.jp/img/characters/sumikko/shirokuma.png"><p class="description">Shirokuma is a shy bear who migrated south to avoid the cold. Shirokuma feels most calm while drinking hot tea in a corner.</p><p class="category">Animal</p><p class="price">$2</p><p class="fact">Close friends with Furoshiki.</p><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select><button class="button">Add to Cart</button></li>';
 
     const actual = sanXProfileLi({
         name: 'Shirokuma',
