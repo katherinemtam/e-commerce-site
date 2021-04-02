@@ -1,3 +1,5 @@
+import { addItemToCart } from './local-storage.utils.js';
+
 export function sanXProfileLi(sanXChar) {
 
     const li = document.createElement('li');
@@ -35,13 +37,17 @@ export function sanXProfileLi(sanXChar) {
     button.classList.add('button');
     button.textContent = 'Add to Cart';
 
+    button.addEventListener('click', () => {
+        addItemToCart(sanXChar.id);
+    });
+
     li.append(h3Name, pType, img, pDescription, pCategory, pPrice, pFact, button);
 
     return li;
 }
 
-export function findById(array, id) {
-    for (let item of array) {
+export function findById(cartArray, id) {
+    for (let item of cartArray) {
         if (item.id === id)
             return item;
     }
