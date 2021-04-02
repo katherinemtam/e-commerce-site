@@ -54,3 +54,4 @@ test('addItemToCart adds an item to the cart', (expect) => {
 
     expect.deepEqual(actual, expected);
 });
+

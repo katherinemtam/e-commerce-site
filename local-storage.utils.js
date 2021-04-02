@@ -29,3 +29,8 @@ export function addItemToCart(productId, quantity) {
     }
     setCart(cartArray);
 }
+
+export function clearCart() {
+    localStorage.clear();
+    window.location = './';
+}
