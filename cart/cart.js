@@ -28,4 +28,5 @@ orderButton.addEventListener('click', () => {
 
 clearButton.addEventListener('click', () => {
     clearCart();
+    window.location = './';
 });

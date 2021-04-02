@@ -31,6 +31,6 @@ export function addItemToCart(productId, quantity) {
 }
 
 export function clearCart() {
-    localStorage.clear();
-    window.location = './';
+    const emptyCart = localStorage.removeItem(CART) || [];
+    return emptyCart;
 }

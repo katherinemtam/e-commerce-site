@@ -1,4 +1,4 @@
-import { getCart, setCart, addItemToCart } from '../local-storage.utils.js';
+import { getCart, setCart, addItemToCart, clearCart } from '../local-storage.utils.js';
 import { cart } from '../cart/cart-data.js';
 
 const test = QUnit.test;
@@ -29,7 +29,7 @@ test('addItemToCart adds an item to the cart', (expect) => {
     const stringyCart = JSON.stringify(cart);
     localStorage.setItem(CART, stringyCart);
 
-    addItemToCart('two');
+    addItemToCart('two', 6);
 
     const actual = getCart();
 
@@ -48,10 +48,39 @@ test('addItemToCart adds an item to the cart', (expect) => {
         },
         {
             id: 'two',
-            quantity: 1
+            quantity: 6
         }
     ];
 
     expect.deepEqual(actual, expected);
 });
 
+test('clearCart should remove all items in cart and clear local storage', (expect) => {
+    const fakeData = [
+        {
+            id: 'one',
+            quantity: 2
+        },
+        {
+            id: 'three',
+            quantity: 1
+        },
+        {
+            id: 'five',
+            quantity: 4
+        },
+        {
+            id: 'two',
+            quantity: 6
+        }
+    ];
+    setCart(fakeData);
+    // localStorage.clear();
+    const actual = clearCart();
+
+
+    const expected = [];
+
+
+    expect.deepEqual(actual, expected);
+});
